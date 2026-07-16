@@ -394,7 +394,7 @@ export default function PricingPage() {
             {filteredPlans.map((plan) => (
               <motion.div
                 key={plan.id}
-                variants={itemVariants}
+                // variants={itemVariants}
                 layout
                 onMouseEnter={() => setHoveredPlan(plan.id)}
                 onMouseLeave={() => setHoveredPlan(null)}
