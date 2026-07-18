@@ -104,7 +104,7 @@ export default function AboutPage() {
 
   const team = [
     {
-      name: "احم",
+      name: "امیرسجاد نوری",
       role: "توسعه‌دهنده ارشد",
       icon: FaCode,
       color: "from-indigo-100 to-blue-100",
@@ -113,7 +113,7 @@ export default function AboutPage() {
       rating: 4.9,
     },
     {
-      name: "مریم کریمی",
+      name: "مهراد نوری",
       role: "متخصص دیتا و تحلیل",
       icon: FaChartLine,
       color: "from-emerald-100 to-teal-100",
@@ -122,7 +122,7 @@ export default function AboutPage() {
       rating: 4.8,
     },
     {
-      name: "سعید محمدی",
+      name: "آراد نوری",
       role: "توسعه‌دهنده موبایل",
       icon: FaMobileAlt,
       color: "from-purple-100 to-pink-100",
