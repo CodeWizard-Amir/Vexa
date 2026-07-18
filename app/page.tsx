@@ -26,8 +26,6 @@ import {
   FaHeadset
 } from 'react-icons/fa';
 import { MdDesignServices, MdSupport, MdSecurity } from 'react-icons/md';
-import Header from './components/Header';
-import Footer from './components/Footer';
 
 export default function Home() {
   const fadeIn = {
@@ -46,10 +44,7 @@ export default function Home() {
   };
 
   return (
-    <>
-      <Header />
-      
-      <main className="pt-20 lg:pt-24">
+    <>      <main className="pt-20 lg:pt-24">
         
         {/* ===== HERO SECTION ===== */}
         <section className="min-h-[calc(100vh-6rem)] flex items-center px-4 bg-gradient-to-br from-gray-50 via-white to-indigo-50/30">
@@ -348,8 +343,6 @@ export default function Home() {
         </section>
 
       </main>
-
-      <Footer />
     </>
   );
 }
