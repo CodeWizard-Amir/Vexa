@@ -4,11 +4,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { 
-  FaArrowRight, 
-  FaRocket, 
-  FaUsers, 
-  FaCode, 
+import {
+  FaArrowRight,
+  FaRocket,
+  FaUsers,
+  FaCode,
   FaMobileAlt,
   FaFileExcel,
   FaChartLine,
@@ -50,7 +50,7 @@ function AnimatedCounter({ target, label, icon }: { target: number; label: strin
           let start = 0;
           const duration = 2000;
           const step = target / (duration / 16);
-          
+
           const timer = setInterval(() => {
             start += step;
             if (start >= target) {
@@ -60,7 +60,7 @@ function AnimatedCounter({ target, label, icon }: { target: number; label: strin
               setCount(Math.floor(start));
             }
           }, 16);
-          
+
           return () => clearInterval(timer);
         }
       },
@@ -113,6 +113,15 @@ export default function AboutPage() {
       rating: 4.9,
     },
     {
+      name: "مونس حسنپور",
+      role: "طراح UI/UX",
+      icon: FaLightbulb,
+      color: "from-amber-100 to-orange-100",
+      textColor: "text-amber-600",
+      bio: "طراحی تجربه کاربری بی‌نظیر برای وب و موبایل",
+      rating: 4.7,
+    },
+    {
       name: "مهراد نوری",
       role: "متخصص دیتا و تحلیل",
       icon: FaChartLine,
@@ -130,15 +139,7 @@ export default function AboutPage() {
       bio: "توسعه اپلیکیشن‌های کراس پلتفرم با React Native",
       rating: 4.9,
     },
-    {
-      name: "مونس حسنپور",
-      role: "طراح UI/UX",
-      icon: FaLightbulb,
-      color: "from-amber-100 to-orange-100",
-      textColor: "text-amber-600",
-      bio: "طراحی تجربه کاربری بی‌نظیر برای وب و موبایل",
-      rating: 4.7,
-    },
+
   ];
 
   const values = [
@@ -188,8 +189,8 @@ export default function AboutPage() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.5 }
     }
@@ -203,8 +204,8 @@ export default function AboutPage() {
         <div className="relative bg-white border-b border-gray-100 overflow-hidden">
           {/* افکت ملایم پس‌زمینه */}
           <div className="absolute inset-0 bg-gradient-to-b from-indigo-50/30 via-white/50 to-white pointer-events-none"></div>
-          
-          <motion.div 
+
+          <motion.div
             style={{ y, opacity }}
             className="relative max-w-7xl mx-auto px-4 py-20 md:py-28"
           >
@@ -234,7 +235,7 @@ export default function AboutPage() {
               className="max-w-2xl"
             >
               <p className="text-gray-600 text-xl leading-relaxed">
-                ما تیمی از متخصصان با تجربه هستیم که با عشق به تکنولوژی و 
+                ما تیمی از متخصصان با تجربه هستیم که با عشق به تکنولوژی و
                 تعهد به کیفیت، بهترین خدمات را به مشتریان خود ارائه می‌دهیم.
               </p>
               <motion.div
@@ -287,7 +288,7 @@ export default function AboutPage() {
             <p className="text-sm text-gray-400 mt-2">متخصصانی که عاشق کارشان هستند</p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -334,7 +335,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-light text-gray-900">چیزی که به آن باور داریم</h2>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -376,7 +377,7 @@ export default function AboutPage() {
 
           <div className="relative max-w-3xl mx-auto">
             <div className="absolute right-1/2 translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-indigo-200 via-purple-200 to-indigo-200"></div>
-            
+
             <div className="space-y-12">
               {milestones.map((item, index) => (
                 <motion.div
@@ -385,9 +386,8 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`flex flex-col md:flex-row items-center gap-6 ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
+                  className={`flex flex-col md:flex-row items-center gap-6 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                    }`}
                 >
                   <div className="flex-1">
                     <div className="bg-white border border-gray-100 rounded-xl p-6 hover:shadow-md transition-all">
@@ -399,11 +399,11 @@ export default function AboutPage() {
                       <p className="text-sm text-gray-400">{item.desc}</p>
                     </div>
                   </div>
-                  
+
                   <div className="relative flex items-center justify-center">
                     <div className="w-3 h-3 bg-indigo-500 rounded-full border-2 border-white shadow-sm"></div>
                   </div>
-                  
+
                   <div className="flex-1"></div>
                 </motion.div>
               ))}
