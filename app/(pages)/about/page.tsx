@@ -104,7 +104,7 @@ export default function AboutPage() {
 
   const team = [
     {
-      name: "احمد رضایی",
+      name: "احم",
       role: "توسعه‌دهنده ارشد",
       icon: FaCode,
       color: "from-indigo-100 to-blue-100",
@@ -131,7 +131,7 @@ export default function AboutPage() {
       rating: 4.9,
     },
     {
-      name: "نازنین حسینی",
+      name: "مونس حسنپور",
       role: "طراح UI/UX",
       icon: FaLightbulb,
       color: "from-amber-100 to-orange-100",
